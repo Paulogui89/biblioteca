@@ -1,0 +1,12 @@
+target/
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.sh
+*.md
+*.txt
+*.log
+*.idea/
+*.iml
+.DS_Store

@@ -1,0 +1,13 @@
+ervices:
+  - type: web
+    name: biblioteca-service
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: JAVA_TOOL_OPTIONS
+        value: -Xmx512m
+    buildCommand: "./mvnw package -DskipTests"
+    startCommand: "java -jar target/biblioteca-1.0.0.jar"
+    healthCheckPath: "/actuator/health"
+    autoDeploy: true
