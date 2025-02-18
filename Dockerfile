@@ -18,7 +18,7 @@ FROM openjdk:11-jdk-slim
 WORKDIR /app
 
 # Copie o arquivo JAR gerado pelo Maven para o diretório de trabalho
-COPY --from=build /app/target/biblioteca-1.0.0.jar app.jar
+COPY --from=build /app/target/biblioteca-1.0-SNAPSHOT.jar app.jar
 
 # Exponha a porta 8080 para acessar a aplicação
 EXPOSE 8080
